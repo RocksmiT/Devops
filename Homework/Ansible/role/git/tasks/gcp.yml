@@ -1,0 +1,29 @@
+---
+- hosts: linux
+  sudo : yes
+  vars:
+    authorized_key_list:
+      - name: root
+        authorized_keys:
+         - key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+           state: present
+  tasks:
+    - name: Install ALL
+      action: apt pkg={{item}} state=present
+      with_items:
+        - default-mysql-server
+        - apache2
+        - git
+        - php-cli
+        - php-fpm
+        - php-json
+        - php-pdo
+        - php-mysql
+        - php-zip
+    - name: Git clone
+      git: 
+       repo: https://github.com/mplesha/NoviNano.git
+       dest: ~/checkout
+       update: no
+      
+        
