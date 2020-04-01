@@ -1,1 +1,1 @@
-To run image use: docker run -it --rm -p 5000:5000 rocksmit21/my-first-repo
+To run image use: docker run -d -p 5000:5000 rocksmit21/my-first-repo
