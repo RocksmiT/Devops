@@ -1,5 +1,3 @@
-
-
-!/flask/app.py
-!/flask/index.html
-!/flask/Dockerfile
+**/node_modules
+*git
+.cache
