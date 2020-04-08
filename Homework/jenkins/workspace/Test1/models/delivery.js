@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2014-2020 Bjoern Kimminich.
+ * SPDX-License-Identifier: MIT
+ */
+
+module.exports = (sequelize, { FLOAT, STRING }) => {
+  const Delivery = sequelize.define('Delivery', {
+    name: STRING,
+    price: FLOAT,
+    deluxePrice: FLOAT,
+    eta: FLOAT
+  })
+
+  return Delivery
+}

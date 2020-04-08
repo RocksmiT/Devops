@@ -1,0 +1,282 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.38">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>rocksmit</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.16">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.6.0">
+      <stagesUUID>87a12b33-874f-4757-97d4-88d4ae02265b</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.6.0">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Example</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">npm config ls</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Git clone</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">rm -rf juice-shop</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">git init</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTreeStep>
+                        <name>dir</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTSingleArgument">
+                          <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                            <value class="string">juice-shop</value>
+                          </value>
+                        </args>
+                        <children>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                            <name>sh</name>
+                            <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                              <arguments class="linked-hash-map">
+                                <entry>
+                                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                    <key>script</key>
+                                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                    <value class="string">pwd</value>
+                                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                </entry>
+                              </arguments>
+                            </args>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        </children>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTreeStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">ls</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">npm install</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">npm fund</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">npm audit fix -y</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">npm start</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>87a12b33-874f-4757-97d4-88d4ae02265b</uuid>
+          </stages>
+          <agent>
+            <agentType>
+              <key>any</key>
+            </agentType>
+          </agent>
+          <tools>
+            <tools class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>nodejs</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">node</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </tools>
+          </tools>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+  </actions>
+  <queueId>40</queueId>
+  <timestamp>1586282747351</timestamp>
+  <startTime>1586282747355</startTime>
+  <result>FAILURE</result>
+  <duration>5806</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script> pipeline {
+  agent any
+ 
+  tools {nodejs &quot;node&quot;}
+ 
+  stages {
+    stage(&apos;Example&apos;) {
+      steps {
+        sh &apos;npm config ls&apos;
+      }
+    }
+    stage(&apos;Git clone&apos;){
+      steps{
+        sh &quot;rm -rf juice-shop&quot;
+        sh &quot;git init&quot;
+        dir (&apos;juice-shop&apos;) {
+        sh &apos;pwd&apos;
+    }
+        sh &quot;ls&quot;
+        sh &quot;npm install&quot;
+        sh &quot;npm fund&quot;
+        sh &quot;npm audit fix -y&quot;
+        sh &quot;npm start&quot;
+        
+    }
+    }
+  }
+}  
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>246833982</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>261630044</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1212000844</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>46009216</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>210863252</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>49</iota>
+    <head>1:49</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
