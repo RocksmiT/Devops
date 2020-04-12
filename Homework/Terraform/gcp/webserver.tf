@@ -19,7 +19,7 @@ resource "google_compute_instance_group_manager" "webservers" {
   name = "my-webservers"
   base_instance_name = "webserver"
   version {
-    instance_template = "{google_compute_instance_template.webserver.self_link}"
+    instance_template = google_compute_instance_template.webserver.self_link
   }
   zone               = "us-west1-a"
   target_size        = 3
